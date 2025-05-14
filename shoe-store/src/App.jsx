@@ -1,8 +1,10 @@
 import '../src/index.css'
+import Rotas from './rotas/Rotas'
 function App() {
 
   return (
     <>
+    <Rotas/>
     </>
   )
 }
