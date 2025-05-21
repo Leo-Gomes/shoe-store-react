@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom';
-import LogoPrimary from '../../public/logo-primary.svg';
-import LogoWhite from '../../public/logo-white.svg';
 
 export const Logo = ({ background = 'white' }) => {
-  const logoSrc = background === 'dark-gray' ? LogoWhite : LogoPrimary;
+  const logoSrc = background === 'dark-gray' ? './logo-white.svg' : './logo-primary.svg';
 
   return (
     <Link to={'/'} className="logo flex items-center cursor-pointer">
