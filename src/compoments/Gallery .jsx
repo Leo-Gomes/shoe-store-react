@@ -1,4 +1,5 @@
 import { Carousel } from 'antd';
+import tenis from '../assets/produtctlistdetail/air-branco.svg'
 
 const contentStyle = {
   margin: 0,
@@ -12,16 +13,19 @@ const Gallery = () => (
   <>
     <Carousel arrows infinite={false}>
       <div>
-        <h3 style={contentStyle}>1</h3>
+        <h3 style={contentStyle}><img src={tenis} alt="" /></h3>
       </div>
       <div>
-        <h3 style={contentStyle}>2</h3>
+        <h3 style={contentStyle}><img src={tenis} alt="" /></h3>
       </div>
       <div>
-        <h3 style={contentStyle}>3</h3>
+        <h3 style={contentStyle}><img src={tenis} alt="" /></h3>
       </div>
       <div>
-        <h3 style={contentStyle}>4</h3>
+        <h3 style={contentStyle}><img src={tenis} alt="" /></h3>
+      </div>
+      <div>
+        <h3 style={contentStyle}><img src={tenis} alt="" /></h3>
       </div>
     </Carousel>
     <br/>
