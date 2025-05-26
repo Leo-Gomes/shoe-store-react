@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex font-extralight justify-between">
           <div className="items-center  w-[42%]">
             <Logo background='dark-gray'/>
-            <p className="my-9 w-[55%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+            <p className="my-9 w-[60%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
             </p>
             <SocialMedia />
           </div>
