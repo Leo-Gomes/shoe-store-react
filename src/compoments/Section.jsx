@@ -1,8 +1,8 @@
 
-export const Section = ({align = 'left', title, children}) => {
+export const Section = ({align = 'left', title, width = '100%', children}) => {
 
     return (
-        <section className="w-[86%] mx-auto">
+        <section className={`w-[${width}] mx-auto`}>
             <h2 className={`text-${align} font-bold text-2xl`}>{title}</h2>
             {children}
         </section>

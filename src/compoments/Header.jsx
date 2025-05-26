@@ -7,13 +7,12 @@ import { Navigator } from './Navigator'
 
 const Header = () => {
 
-  const [searchInput, setSearchInput] = useState('')
   return (
     <header className='bg-white'>
       <div className='w-[86%] mx-auto'>
         <div className="flex justify-between w-full gap-4 items-center">
           <Logo/>
-          <SearchField searchInput={searchInput} setSearchInput={setSearchInput}/>
+          <SearchField/>
           <Sing/>
           <Cart/>
         </div>
