@@ -1,5 +1,6 @@
 import { Carousel } from 'antd';
-
+import '../index.css'
+import { BuyBox } from './BuyBox';
 const contentStyle = {
   margin: 0,
   height: '160px',
@@ -8,23 +9,19 @@ const contentStyle = {
   textAlign: 'center',
   background: '#364d79',
 };
+
+const produtos = [1, 2, 3, 4, 5]
 const Gallery = () => (
-  <>
-    <Carousel arrows infinite={false}>
-      <div>
-        <h3 style={contentStyle}>1</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>2</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>3</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>4</h3>
-      </div>
+  <div className='w-[49%]'>
+    
+    <Carousel arrows infinite={false} dots={false}>
+      
+      {produtos.map((item, index) => (
+        <div key={index} className='w-full bg-blue-500 text-white text-center h-100 content-center'>item {item}</div>
+      ))}
+      
     </Carousel>
-    <br/>
-  </>
+  </div>
+  
 );
 export default Gallery;
