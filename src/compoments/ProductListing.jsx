@@ -9,7 +9,7 @@ export const ProductListing = ({cards}) => {
     const {filteredProducts} = useContext(ProductContext);
   
     return (
-        <ul className={`flex flex-wrap justify-between`}>
+        <ul className={`ml-6 grid grid-cols-3 gap-4`}>
             {filteredProducts.map(item => (
                <li key={item.id} onClick={() => console.log(filteredProducts)}><Link to={`../productviewpage/${item.id}`}> <ProductCard img={item.img} priceDiscount={item.priceDiscount} categoria={item.categoria} titulo={item.titulo} preco={item.preco}/></Link></li>
             )).slice(0,cards)}
