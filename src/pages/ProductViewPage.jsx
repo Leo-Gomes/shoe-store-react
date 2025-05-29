@@ -1,13 +1,19 @@
 import React from 'react'
   import Gallery from '../compoments/Gallery '
 import { BuyBox } from '../compoments/BuyBox'
+import { Section } from '../compoments/Section'
 
 const ProductViewPage = () => {
   return (
-    <div className='flex'>
-      
-      <Gallery/>
+    <div>
+   <Section width='86%'>
+
+      <Gallery width='49%'>
+
+      </Gallery>
       <BuyBox/>
+   </Section>
+     
     </div>
     )
 }

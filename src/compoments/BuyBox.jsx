@@ -13,7 +13,7 @@ export const BuyBox = ({ name, reference, stars, rating, priceDiscount, price, d
             .catch(err => console.error("Erro ao buscar produtos: ", err));
     }, [])
     return (
-        <div className="ml-10 flex flex-col justify-between">
+        <div className="ml-7 flex flex-col mt-3 ">
             <h2 className="font-bold text-[32px] h-18">{productView.titulo}</h2>
             <p className="text-xs text-dark-gray-3 mb-2">Casual | {productView.marca} | {productView.reference}</p>
 
@@ -27,7 +27,7 @@ export const BuyBox = ({ name, reference, stars, rating, priceDiscount, price, d
             </div>
 
             <h2 className="font-bold text-sm text-light-gray">Descrição do produto</h2>
-            <p className="text-sm text-dark-gray-2 w-[75%]">{productView.description}</p>
+            <p className="text-sm text-dark-gray-2 w-[75%] mb-7">{productView.description}</p>
 
             <h2 className="font-bold text-sm text-light-gray ">Tamanho</h2>
 
