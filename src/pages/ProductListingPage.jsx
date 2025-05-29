@@ -1,6 +1,7 @@
 import React from 'react'
 import { ProductListing } from '../compoments/ProductListing'
 import { OrderFilter } from '../compoments/OrderFilter'
+
 import { FilterSideBar } from '../compoments/FilterSideBar'
 import { Section } from '../compoments/Section'
 
