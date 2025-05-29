@@ -8,7 +8,7 @@ const ProductViewPage = () => {
     <div>
    <Section width='86%'>
 
-      <Gallery width='49%'>
+      <Gallery width='49%' showThumbs>
 
       </Gallery>
       <BuyBox/>
