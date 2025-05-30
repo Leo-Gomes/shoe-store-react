@@ -2,7 +2,7 @@
 export const ProductCard = ({ img, priceDiscount, categoria, titulo, preco }) => {
 
     return (
-        <div className="mb-8">
+        <div className="mb-8 w-74">
             <div className="flex bg-white rounded-sm relative">
                 <img src={img} alt="Tênis" className="w-73 h-80"/>
                 {priceDiscount && <p className="text-xs bg-[#e7ff86] rounded-sm absolute left-5 mt-5 p-1">{((preco - priceDiscount) / preco * 100).toFixed(0)}% OFF</p> }

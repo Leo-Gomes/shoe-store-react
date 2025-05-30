@@ -6,6 +6,15 @@
     font-family: Inter, sans-serif;
 }
 
+.swiper-pagination-bullet-active {
+    background-color: #c92071 !important;
+    opacity: 1;
+  }
+
+  .swiper-pagination{
+    padding-bottom: 20px;
+  }
+
 @theme {
     --color-primary: #C92071;
     --color-secondary: #B5B6F2;

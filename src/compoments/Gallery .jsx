@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Thumbs, Pagination } from 'swiper/modules';
+import { Navigation, Thumbs, Pagination, Autoplay } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -20,7 +20,7 @@ const Gallery = ({
   showThumbs = false,
   pag = false,
   images = null,
-  children = null, // componente a ser exibido no lado direito do slide
+  children = null,
 }) => {
   const { id } = useParams();
   const [productView, setProductView] = useState({});
@@ -46,15 +46,16 @@ const Gallery = ({
   return (
     <div className={`w-[49%] ${className}`} style={{ width }}>
       {!images && (
-        <h2 className="text-sm mb-4">
+        <h2 className="text-sm my-8">
           <span className="font-bold">HOME /</span> Produtos / {productView.categoria} {productView.marca} / {productView.titulo}
         </h2>
       )}
 
       <Swiper
-        modules={[Navigation, Thumbs, Pagination]}
-        navigation
+        modules={[Navigation, Thumbs, Pagination, Autoplay]}
+        navigation={pag ? false : true}
         pagination={pag ? { clickable: true } : false}
+        autoplay={{delay:5000}}
         thumbs={{ swiper: thumbsSwiper }}
         spaceBetween={20}
         slidesPerView={1}
@@ -64,8 +65,8 @@ const Gallery = ({
           <SwiperSlide key={index}>
             <div
               style={{
-                height,
-                backgroundColor: images ? "#FFF" : slide.bg,
+                height: images ? '600px' : height,
+                backgroundColor: images ? "#F5F5F5" : slide.bg,
                 borderRadius: radius,
               }}
               className={`flex items-center justify-center ${
@@ -73,7 +74,7 @@ const Gallery = ({
               }`}
             >
               <div
-                className={`flex items-center justify-center ${
+                className={`flex items-center justify-center relative${
                   images ? 'w-1/2' : 'w-full'
                 }`}
               >
@@ -81,8 +82,9 @@ const Gallery = ({
                   src={slide.src}
                   alt={`Slide ${index + 1}`}
                   style={{ borderRadius: radius }}
-                  className="max-h-full object-contain"
+                  className="-translate-x-[14%]"
                 />
+                <img src="/ornament-home.svg" alt=""  className='absolute top-10 right-9'/>
               </div>
 
               {images && (
@@ -124,6 +126,7 @@ const Gallery = ({
                     objectFit: 'contain',
                   }}
                 />
+               
               </div>
             </SwiperSlide>
           ))}
