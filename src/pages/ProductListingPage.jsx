@@ -9,7 +9,7 @@ const ProductListingPage = () => {
   return (
     <div className='mx-auto w-[86%]'>
     <OrderFilter/>
-    <Section>
+    <Section display='flex'>
     <FilterSideBar/>
     <ProductListing cards={15}/>
     </Section>
