@@ -1,10 +1,11 @@
 import React from 'react'
-import { Section } from '../compoments/Section'
+
+import { Maintenance } from '../compoments/Maintenance'
 
 
 const Categories = () => {
     return (
-      <div>Categories</div>
+      <Maintenance/>
     )
   }
   

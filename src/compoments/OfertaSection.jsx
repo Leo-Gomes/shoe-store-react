@@ -2,7 +2,7 @@ import React from 'react'
 
 const OfertaSection = () => {
   return ( 
-    <section className="flex w-full justify-around bg-white mt-25 p-10 py-20">
+    <section className="flex w-full justify-around bg-white p-10 py-20">
         <div className='relative text-center '>
             <img src="/fundo.svg" alt="" className='w-[466px] h-[466px]'/>
             <img src="/sapato.svg" alt="" className="w-[573px] absolute top-15 -left-7 "/>

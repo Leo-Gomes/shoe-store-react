@@ -1,9 +1,10 @@
 import React from 'react'
+import { Maintenance } from '../compoments/Maintenance'
 
 
 const MyOrders = () => {
     return (
-      <div>MyOrders</div>
+    <Maintenance/>
     )
   }
   

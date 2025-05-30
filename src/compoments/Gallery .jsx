@@ -15,7 +15,7 @@ const bgColors = ['#E2E3FF', '#FFE8BC', '#FFC0BC', '#DEC699', '#E8DFCF'];
 const Gallery = ({
   className = '',
   width = '100%',
-  height = '500px',
+  height = '570px',
   radius = '0px',
   showThumbs = false,
   pag = false,
@@ -47,7 +47,7 @@ const Gallery = ({
     <div className={`w-[49%] ${className}`} style={{ width }}>
       {!images && (
         <h2 className="text-sm my-8">
-          <span className="font-bold">HOME /</span> Produtos / {productView.categoria} {productView.marca} / {productView.titulo}
+          <span className="font-bold">HOME /</span> Produtos / {productView.categoria} / {productView.marca} / {productView.titulo}
         </h2>
       )}
 
@@ -55,7 +55,7 @@ const Gallery = ({
         modules={[Navigation, Thumbs, Pagination, Autoplay]}
         navigation={pag ? false : true}
         pagination={pag ? { clickable: true } : false}
-        autoplay={{delay:5000}}
+        autoplay={{delay:7000}}
         thumbs={{ swiper: thumbsSwiper }}
         spaceBetween={20}
         slidesPerView={1}
@@ -82,9 +82,9 @@ const Gallery = ({
                   src={slide.src}
                   alt={`Slide ${index + 1}`}
                   style={{ borderRadius: radius }}
-                  className="-translate-x-[14%]"
+                  className={`${!pag ? 'w-110' : '-translate-x-[14%] '}`}
                 />
-                <img src="/ornament-home.svg" alt=""  className='absolute top-10 right-9'/>
+                {images &&(<img src="/ornament-home.svg" alt=""  className='absolute top-10 right-9'/>)}
               </div>
 
               {images && (
@@ -114,7 +114,7 @@ const Gallery = ({
                   backgroundColor: slide.bg,
                   borderRadius: radius,
                 }}
-                className="flex items-center justify-center border-2 border-transparent cursor-pointer hover:border-primary swiper-slide-thumb-active:border-primary"
+                className="flex items-center justify-center border-2 border-transparent cursor-pointer hover:border-primary swiper-slide-thumb-active:border-primary mb-18"
               >
                 <img
                   src={slide.src}
