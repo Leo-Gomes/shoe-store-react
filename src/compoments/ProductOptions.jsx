@@ -5,7 +5,7 @@ export const ProductOptions = ({ options, radius = "4px", shape = "square", type
   const [selected, setSelected] = useState(null);
 
   return (
-    <div className="flex gap-2 flex-wrap">
+    <div className="flex gap-2 flex-wrap my-2">
       {options.map((option, index) => {
         const isSelected = selected === index;
 

@@ -36,7 +36,7 @@ export const FilterSideBar = () => {
                 options={[
                     { text: "Masculina" },
                     { text: "Feminino" },
-                    { text: "Unisex", value: "opt3" },
+                    { text: "Unisex"},
                 ]}
             />
 

@@ -4,7 +4,8 @@ export const ColecoesDestaque1 = () => {
 
     return (
 
-        
+        <div className="mt-8">
+
         <Section title='Coleções em destaque' axle='flex-col' width='86%'>
             <div className="flex gap-x-3 justify-center">
 
@@ -45,5 +46,6 @@ export const ColecoesDestaque1 = () => {
 
         </div>
         </Section>
+                    </div>
                 )
                 }

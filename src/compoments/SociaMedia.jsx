@@ -5,9 +5,9 @@ export const SocialMedia = () =>{
     
     return(
         <div className='flex w-[20%] justify-between'>
-            <a href=""><img src={FbIcon} alt="Icon-Facebook" /></a>
-            <a href=""><img src={InstaIcon} alt="Icon-Instagram" /></a>
-            <a href=""><img src={TwitterIcon} alt="Icon-Twitter" /></a>
+            <a href="https://www.facebook.com/digitalcollegebr/" target="_blank"><img src={FbIcon} alt="Icon-Facebook" /></a>
+            <a href="https://www.instagram.com/digitalcollegebr/" target="_blank"><img src={InstaIcon} alt="Icon-Instagram" /></a>
+            <a href="https://x.com/eaicollegers" target="_blank"><img src={TwitterIcon} alt="Icon-Twitter" /></a>
         </div>
     )
 }
