@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/thumbs';
 
-const bgColors = ['#f8d7da', '#d1ecf1', '#d4edda', '#fff3cd', '#cce5ff'];
+const bgColors = ['#E2E3FF', '#FFE8BC', '#FFC0BC', '#DEC699', '#E8DFCF'];
 
 const Gallery = ({
   className = '',
