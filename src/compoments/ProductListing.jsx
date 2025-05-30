@@ -10,10 +10,18 @@ export const ProductListing = ({cards, cols = true}) => {
 
     const isActive = (endPoint) => path === endPoint;
     return (
+        <div>
+
+    {filteredProducts.length > 0 ?
+
         <ul className={`grid ${cols ? 'grid-cols-3' : 'grid-cols-4'} gap-4 mb-20`}>
             {(isActive('/productlistingpage') ? filteredProducts: products).map(item => (
-               <li key={item.id} onClick={() => window.scrollTo(0, 0)}><Link to={`../productviewpage/${item.id}`}> <ProductCard img={item.img} priceDiscount={item.priceDiscount} categoria={item.categoria} titulo={item.titulo} preco={item.preco}/></Link></li>
+                
+                <li key={item.id} onClick={() => window.scrollTo(0, 0)}><Link to={`../productviewpage/${item.id}`}> <ProductCard img={item.img} priceDiscount={item.priceDiscount} categoria={item.categoria} titulo={item.titulo} preco={item.preco}/></Link></li>
             )).slice(0,cards)}
-        </ul>
+        </ul> : <h2 className="font-bold text-4xl text-center">Nenhum produto encontrado</h2>}
+
+        
+        </div>
     )
 }
