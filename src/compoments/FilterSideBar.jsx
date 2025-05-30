@@ -3,7 +3,7 @@ import { FilterGroup } from "./FilterGroup"
 export const FilterSideBar = () => {
 
     return (
-        <aside className="px-[30px] w-77 bg-white h-fit py-5">
+        <aside className="px-[30px] w-77 bg-white h-fit py-5 mr-7">
             <h2 className="">Filtrar por</h2>
             <div className="w-full bg-[#cccccc] h-[1px] my-5"></div>
 
